@@ -28,6 +28,7 @@ int main() {
 			sm.showRecord();
 			break;
 		case 3:		//清空记录
+			sm.clearRecord();
 			break;
 		case 0:		//退出系统
 			sm.exitSystem();

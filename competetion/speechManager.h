@@ -38,6 +38,9 @@ public:
 	void loadRecord();
 	void showRecord();
 
+	//Çå¿Õ¼ÇÂ¼
+	void clearRecord();
+
 	//*****************************
 	//******members available******
 	//*****************************

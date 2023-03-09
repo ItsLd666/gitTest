@@ -265,3 +265,26 @@ void SpeechManager::showRecord() {
 	system("pause");
 	system("cls");
 }
+
+void SpeechManager::clearRecord() {
+	cout << "确认清空？" << endl;
+	cout << "1.确认" << endl;
+	cout << "2.取消" << endl;
+	int choice;
+	cin >> choice;
+	if (choice == 1) {
+		ofstream ofs;
+		ofs.open("speech.csv", ios::trunc);
+		ofs.close();
+		this->initSpeech();
+		this->createSpeaker();
+		this->loadRecord();
+
+		cout << "已清空记录！" << endl;
+		system("pause");
+		system("cls");
+	}
+	else {
+		return;
+	}
+}
