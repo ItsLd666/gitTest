@@ -25,6 +25,7 @@ int main() {
 
 			break;
 		case 2:		//查看记录
+			sm.showRecord();
 			break;
 		case 3:		//清空记录
 			break;

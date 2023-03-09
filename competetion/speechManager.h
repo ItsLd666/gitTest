@@ -3,7 +3,7 @@
 #include "speaker.h"
 #include <vector>
 #include <map>
-#include <fstream>
+
 
 using namespace std;
 
@@ -31,8 +31,12 @@ public:
 	void startSpeech();
 	void speechDraw();  //抽签
 	void speechContest();  //比赛
-	void showRes();
-	void writeRes();
+	void showRes();  //显示结果
+	void saveRecord();
+
+	//查看记录
+	void loadRecord();
+	void showRecord();
 
 	//*****************************
 	//******members available******
@@ -52,4 +56,10 @@ public:
 
 	//比赛轮次
 	int m_Index;
+
+	//文件是否为空
+	bool fileIsEmpty = true;
+
+	//存储读取结果
+	map<int, vector<string>> m_Record;
 };
